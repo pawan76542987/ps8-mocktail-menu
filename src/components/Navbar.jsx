@@ -8,7 +8,9 @@ function Navbar({ favouriteCount }) {
       </Link>
 
       <div className="nav-links">
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/" end>
+          Home
+        </NavLink>
         <NavLink to="/drinks">Menu</NavLink>
 
         <NavLink to="/favourites">
