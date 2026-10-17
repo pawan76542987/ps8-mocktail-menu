@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #25352b;
+  background: #fbfaf6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  min-height: 76px;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  border-bottom: 1px solid #e9e8df;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #245b40;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: #526157;
+}
+
+.nav-links a.active {
+  color: #17643e;
+  font-weight: 700;
+}
+
+.hero {
+  max-width: 1250px;
+  margin: auto;
+  min-height: 570px;
+  padding: 65px 7%;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.hero h1,
+.section-heading h1,
+.recipe-content h1 {
+  font-family: "Playfair Display", serif;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.12;
+  margin: 18px 0;
+}
+
+.hero-content > p:not(.eyebrow) {
+  color: #657168;
+  max-width: 430px;
+  line-height: 1.8;
+}
+
+.eyebrow {
+  color: #43805a;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.primary-button {
+  display: inline-block;
+  background: #245b40;
+  color: white;
+  padding: 14px 23px;
+  border-radius: 7px;
+  margin-top: 18px;
+  border: none;
+}
+
+.primary-button:hover {
+  background: #17452e;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 180px 180px 18px 18px;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 55px 7%;
+  min-height: 70vh;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h1,
+.recipe-content h1 {
+  font-size: clamp(32px, 4vw, 46px);
+  margin: 10px 0;
+}
+
+.section-heading p:not(.eyebrow) {
+  color: #68756b;
+}
+
+.search-input {
+  display: block;
+  width: min(100%, 520px);
+  padding: 14px 18px;
+  border: 1px solid #d9ded7;
+  border-radius: 8px;
+  background: white;
+  margin: 0 auto 35px;
+  outline-color: #43805a;
+}
+
+.drink-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.drink-card {
+  background: #fff;
+  border: 1px solid #eceee8;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.drink-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px #243b2b12;
+}
+
+.drink-card img {
+  width: 100%;
+  height: 235px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-info {
+  padding: 15px 17px 18px;
+}
+
+.card-info h3 {
+  margin: 0 0 8px;
+  padding-right: 25px;
+  font-size: 17px;
+}
+
+.card-info p {
+  margin: 0;
+  color: #718075;
+  font-size: 13px;
+}
+
+.heart-button {
+  position: absolute;
+  right: 12px;
+  bottom: 23px;
+  border: none;
+  background: #f3f6ef;
+  color: #bd3c55;
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  font-size: 22px;
+}
+
+.message {
+  text-align: center;
+  padding: 50px 15px;
+  line-height: 1.7;
+}
+
+.back-button {
+  background: transparent;
+  border: 1px solid #d9ded7;
+  padding: 10px 16px;
+  border-radius: 7px;
+  margin-bottom: 28px;
+}
+
+.recipe-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.recipe-image {
+  width: 100%;
+  max-height: 550px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.recipe-content > p {
+  line-height: 1.7;
+  color: #59675e;
+}
+
+.recipe-content h2 {
+  font-family: "Playfair Display", serif;
+  margin-top: 30px;
+}
+
+.ingredient-list {
+  padding: 0;
+  list-style: none;
+}
+
+.ingredient-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e7e9e2;
+}
+
+.ingredient-list li span:last-child {
+  color: #68756b;
+  text-align: right;
+}
+
+.instructions {
+  white-space: pre-line;
+}
+
+.not-found {
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 70vh;
+}
+
+.not-found h1 {
+  font-size: 90px;
+  margin: 10px;
+  font-family: "Playfair Display", serif;
+}
+
+.not-found h2 {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+    gap: 30px;
+  }
+
+  .hero-image img {
+    height: 320px;
+    border-radius: 100px 100px 15px 15px;
+  }
+
+  .drink-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .drink-card img {
+    height: 190px;
+  }
+
+  .recipe-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .recipe-image {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 16px 5%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .hero,
+  .page-container {
+    padding: 35px 5%;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .drink-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .drink-card img {
+    height: 260px;
+  }
+
+  .section-heading {
+    margin-bottom: 25px;
+  }
+}
